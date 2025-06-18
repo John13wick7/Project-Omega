@@ -3,58 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Проект Омега</title>
+    <title>Моя Семья</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Orbitron:wght@400;700&display=swap');
+        
         body {
             background-color: #0d0d0d;
-            color: #00ff7f;
-            font-family: 'Orbitron', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            color: #f0f0f0;
+            font-family: 'Comfortaa', cursive;
             margin: 0;
-            overflow: hidden;
+            padding: 20px;
             text-align: center;
         }
-        .container {
-            background: rgba(0, 255, 127, 0.05);
-            padding: 40px;
-            border: 1px solid #00ff7f;
-            box-shadow: 0 0 25px rgba(0, 255, 127, 0.5);
-            animation: flicker 3s infinite alternate;
-        }
-        h1 {
+
+        .header {
+            font-family: 'Orbitron', sans-serif;
+            color: #00ff7f;
+            text-shadow: 0 0 15px rgba(0, 255, 127, 0.7);
             font-size: 2.5em;
-            text-transform: uppercase;
-            animation: pulse 1.5s infinite;
-            letter-spacing: 5px;
+            margin-bottom: 10px;
         }
-        p {
+
+        .subtitle {
             font-size: 1.2em;
-            opacity: 0.8;
+            color: #aaa;
+            margin-bottom: 40px;
         }
-        .status {
-            color: #ff3b3b;
-            font-weight: bold;
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
         }
-        @keyframes pulse {
-            0% { text-shadow: 0 0 5px #00ff7f; }
-            50% { text-shadow: 0 0 20px #00ff7f; }
-            100% { text-shadow: 0 0 5px #00ff7f; }
+
+        .card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        @keyframes flicker {
-            0% { opacity: 0.9; }
-            100% { opacity: 1; }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(0, 255, 127, 0.5);
+            border-color: #00ff7f;
         }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-caption {
+            padding: 20px;
+            font-size: 1.1em;
+        }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Владимир Серебряков</h1>
-        <p>Инициализация системы... Протоколы запущены.</p>
-        <p>Статус: <span class="status">ОПЕРАЦИЯ УСПЕШНА</span></p>
+
+    <h1 class="header">ПРОЕКТ "СЕМЬЯ"</h1>
+    <p class="subtitle">Самые важные люди в моей вселенной.</p>
+
+    <div class="gallery">
+
+        <!-- Карточка для Папы -->
+        <div class="card">
+            <img src="dad.jpg" alt="Фото Папы">
+            <div class="card-caption">
+                <p>Лучший папа, моя опора и пример.</p>
+            </div>
+        </div>
+
+        <!-- Карточка для Мамы -->
+        <div class="card">
+            <img src="mom.jpg" alt="Фото Мамы">
+            <div class="card-caption">
+                <p>Самая заботливая и любимая мама.</p>
+            </div>
+        </div>
+
+        <!-- Карточка для Брата 1 -->
+        <div class="card">
+            <img src="brother1.jpg" alt="Фото Брата">
+            <div class="card-caption">
+                <p>Мой верный брат и лучший друг.</p>
+            </div>
+        </div>
+
+        <!-- Карточка для Брата 2 (если есть, если нет - удали весь этот блок) -->
+        <div class="card">
+            <img src="brother2.jpg" alt="Фото Второго Брата">
+            <div class="card-caption">
+                <p>Всегда готов к приключениям!</p>
+            </div>
+        </div>
+
+        <!-- Ты можешь копировать и вставлять эти блоки <div class="card">...</div> для каждого члена семьи -->
+
     </div>
+
 </body>
 </html>
